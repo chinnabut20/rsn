@@ -11,5 +11,3 @@ npm run dev
 npm run build
 
 
-  git config --global user.email "ckartckart@gmail.com"
-  git config --global user.name "chinnabut20"
