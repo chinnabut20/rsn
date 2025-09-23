@@ -1,0 +1,1433 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Krabi",
+        "Province": "Krabi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.917,
+          8.067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Phanom Thuan",
+        "Province": "Kanchanaburi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.701,
+          14.126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Tha Muang",
+        "Province": "Kanchanaburi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.633,
+          13.967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Tha Mai",
+        "Province": "Chanthaburi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.017,
+          12.617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Plaeng Yao",
+        "Province": "Chachoengsao"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.283,
+          13.567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Chachoengsao",
+        "Province": "Chachoengsao"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.083,
+          13.7
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Noen Mok",
+        "Province": "Chon Buri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.2667,
+          13.2833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Bung",
+        "Province": "Chon Buri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.967,
+          12.867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Chang",
+        "Province": "Rayong"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.067,
+          12.717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Nong Khanun",
+        "Province": "Chon Buri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.2,
+          13.2667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Phanat Nikhom",
+        "Province": "Chon Buri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.183,
+          13.45
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Chaiyaphum",
+        "Province": "Chaiyaphum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.033,
+          15.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Bamnet Narong",
+        "Province": "Chaiyaphum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.69,
+          15.499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Lang Suan",
+        "Province": "Chumphon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.067,
+          9.95
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Pak Thang",
+        "Province": "Chiang Mai"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.95,
+          19.1333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Pa Sang",
+        "Province": "Lamphun"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.939,
+          18.524
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Chiang Mai",
+        "Province": "Chiang Mai"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.982,
+          18.79
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Trang",
+        "Province": "Trang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.6,
+          7.55
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Tak",
+        "Province": "Tak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.133,
+          16.867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Khlong Sip Si",
+        "Province": "Pathum Thani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.9167,
+          14.0833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Sam Phran",
+        "Province": "Nakhon Pathom"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.217,
+          13.717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Sam Phran",
+        "Province": "Nakhon Pathom"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.217,
+          13.717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Sam Phran",
+        "Province": "Nakhon Pathom"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.217,
+          13.717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Nakhon Phanom",
+        "Province": "Nakhon Phanom"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.783,
+          17.4
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Nakhon Ratchasima",
+        "Province": "Nakhon Ratchasima"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.117,
+          14.967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Dan Khun Thot",
+        "Province": "Nakhon Ratchasima"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.806,
+          15.206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Pak Chong",
+        "Province": "Nakhon Ratchasima"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.413,
+          14.704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Sung Noen",
+        "Province": "Nakhon Ratchasima"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.814,
+          14.899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Nakhon Si Thammarat",
+        "Province": "Nakhon Si Thammarat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.967,
+          8.433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Phayuha Khiri",
+        "Province": "Nakhon Sawan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.133,
+          15.45
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Khok Samran",
+        "Province": "Lop Buri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.535,
+          15.3425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Nakhon Sawan",
+        "Province": "Nakhon Sawan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.117,
+          15.683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Chon Dua",
+        "Province": "Nakhon Sawan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.3833,
+          15.2833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Nakhon Sawan",
+        "Province": "Nakhon Sawan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.117,
+          15.683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Bang Yai",
+        "Province": "Nonthaburi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.467,
+          13.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Bang Len",
+        "Province": "Nakhon Pathom"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.167,
+          14.017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Narathiwat",
+        "Province": "Narathiwat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.824,
+          6.424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Nan",
+        "Province": "Nan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.783,
+          18.783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Pakxan",
+        "Province": "Louangphrabang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.65,
+          18.367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Buriram",
+        "Province": "Buriram"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.117,
+          15.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Buriram",
+        "Province": "Buriram"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.117,
+          15.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Nang Rong",
+        "Province": "Buriram"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.8,
+          14.633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Khlong Luang",
+        "Province": "Pathum Thani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.65,
+          14.067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Kui Buri",
+        "Province": "Prachuap Khiri Khan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.867,
+          12.05
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Prachin Buri",
+        "Province": "Prachin Buri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.37,
+          14.05
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Nong Chik",
+        "Province": "Pattani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.188,
+          6.845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Bang Pa-In",
+        "Province": "Phra Nakhon Si Ayutthaya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.583,
+          14.233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Bang Pa-In",
+        "Province": "Phra Nakhon Si Ayutthaya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.583,
+          14.233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Nakhon Luang",
+        "Province": "Phra Nakhon Si Ayutthaya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.617,
+          14.45
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Bang Sai",
+        "Province": "Phra Nakhon Si Ayutthaya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5,
+          14.217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Phangnga",
+        "Province": "Phangnga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.533,
+          8.467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Phangnga",
+        "Province": "Phangnga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.533,
+          8.467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Phitsanulok",
+        "Province": "Phitsanulok"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.25,
+          16.833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Sadao",
+        "Province": "Phitsanulok"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4333,
+          16.7
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Cha-Am",
+        "Province": "Phetchaburi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.967,
+          12.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Phetchabun",
+        "Province": "Phetchabun"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.133,
+          16.417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Lom Sak",
+        "Province": "Phetchabun"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.25,
+          16.783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Lom Sak",
+        "Province": "Phetchabun"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.25,
+          16.783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Mukdahan",
+        "Province": "Mukdahan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.717,
+          16.533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Tha Pai",
+        "Province": "Mae Hong Son"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.4667,
+          19.3
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Yasothon",
+        "Province": "Yasothon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.149,
+          15.795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Yasothon",
+        "Province": "Yasothon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.149,
+          15.795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Yala",
+        "Province": "Yala"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.284,
+          6.543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Nong Phu",
+        "Province": "Roi Et"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7333,
+          15.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Roi Et",
+        "Province": "Roi Et"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.667,
+          16.05
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Yasothon",
+        "Province": "Yasothon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.149,
+          15.795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Roi Et",
+        "Province": "Roi Et"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.667,
+          16.05
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ranong",
+        "Province": "Ranong"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.633,
+          9.967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Khlong Nam Sai",
+        "Province": "Ranong"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.6,
+          9.7333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Chang",
+        "Province": "Rayong"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.067,
+          12.717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Pong",
+        "Province": "Ratchaburi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.883,
+          13.817
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ratchaburi",
+        "Province": "Ratchaburi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.8,
+          13.533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Lampang",
+        "Province": "Lampang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.507,
+          18.298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Lampang",
+        "Province": "Lampang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.507,
+          18.298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Lamphun",
+        "Province": "Lamphun"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.009,
+          18.581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Loei",
+        "Province": "Loei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.717,
+          17.483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Si Sa Ket",
+        "Province": "Sisaket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.333,
+          15.117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Si Sa Ket",
+        "Province": "Sisaket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.333,
+          15.117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Sawang Daen Din",
+        "Province": "Sakon Nakhon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.458,
+          17.472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Hat Yai",
+        "Province": "Songkhla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.467,
+          7.017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Hat Yai",
+        "Province": "Songkhla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.467,
+          7.017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Plai Muang",
+        "Province": "Songkhla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6833,
+          7.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Bang Bo",
+        "Province": "Samut Prakan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.833,
+          13.567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Damnoen Saduak",
+        "Province": "Ratchaburi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.933,
+          13.517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Samut Songkhram",
+        "Province": "Samut Songkhram"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0,
+          13.4
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Phaeo",
+        "Province": "Samut Sakhon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.117,
+          13.583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Krathum Baen",
+        "Province": "Samut Sakhon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.267,
+          13.65
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Mai Watthana Nakhon",
+        "Province": "Sa Kaeo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.3317,
+          13.7478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Nong Khae",
+        "Province": "Saraburi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.867,
+          14.333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Kaeng Khoi",
+        "Province": "Saraburi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.017,
+          14.583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Pho Thong",
+        "Province": "Ang Thong"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.417,
+          14.667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Sukhothai",
+        "Province": "Sukhothai"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.823,
+          17.006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Suphan Buri",
+        "Province": "Suphan Buri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.117,
+          14.467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Phun Phin",
+        "Province": "Surat Thani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.2,
+          9.117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Don Sak",
+        "Province": "Surat Thani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.683,
+          9.3
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Surin",
+        "Province": "Surin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.483,
+          14.883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Wiset Chai Chan",
+        "Province": "Ang Thong"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.35,
+          14.583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ban Thai Tan",
+        "Province": "Ang Thong"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.483,
+          14.617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Udon Thani",
+        "Province": "Udon Thani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.793,
+          17.408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Kumphawapi",
+        "Province": "Udon Thani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.968,
+          17.134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Uttaradit",
+        "Province": "Uttaradit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.101,
+          17.631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Station:": "Ubon Ratchathani",
+        "Province": "Ubon Ratchathani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.863,
+          15.233
+        ]
+      }
+    }
+  ]
+}

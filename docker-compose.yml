@@ -1,0 +1,22 @@
+
+services:
+  backend:
+    build: ./backend
+    container_name: rsn_api
+    ports:
+      - "2456:8000"
+    volumes:
+      - ./backend:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    image: node:latest
+    container_name: rsn
+    working_dir: /app
+    ports:
+      - "2400:3000"
+    volumes:
+      - ./frontend:/app
+    command: sh -c "npm i && npm i -g nodemon && nodemon"
+
+
