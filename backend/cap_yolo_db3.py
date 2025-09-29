@@ -8,7 +8,7 @@ from collections import defaultdict
 import imagehash
 from PIL import Image
 import filecmp
-from url1 import urls
+from url3 import urls
 from ultralytics import YOLO
 import psycopg2  
 import shutil
