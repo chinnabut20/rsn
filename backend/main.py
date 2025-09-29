@@ -118,7 +118,7 @@ def prepare_daily_df():
         pollution_df = pd.DataFrame(pollution_json)
         traffic_df   = pd.DataFrame(traffic_json)
 
-        # rename ให้ตรงกับ columns เดิม
+        # ✅ rename ให้ตรงกับ columns เดิม
         pollution_df = pollution_df.rename(columns={
             "co": "CO", "no2": "NO2", "o3": "O3", "so2": "SO2",
             "pm25": "PM2.5", "pm10": "PM10",
