@@ -340,6 +340,19 @@ async def available_dates():
     conn.close()
     return {"min_date": str(min_date), "max_date": str(max_date)}
 
+@app.get("/rsn_api/CCTV_locations")
+async def get_cctv_locations():
+    try:
+        # get from geojson file
+        geojson_path = "CCTV_locations.geojson"
+        if not os.path.exists(geojson_path):
+            raise HTTPException(status_code=404, detail="GeoJSON file not found")
+        import json
+        with open(geojson_path, "r", encoding="utf-8") as f:
+            geojson_data = json.load(f)
+        return geojson_data
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"DB error: {str(e)}")
 
 # ==========================
 # Run server
