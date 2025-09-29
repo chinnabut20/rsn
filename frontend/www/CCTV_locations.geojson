@@ -1,0 +1,1433 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Krabi",
+        "station_id": "PER-14-007"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.81496,
+          8.20723
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Kanchanaburi",
+        "station_id": "PER-11-022"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.68241,
+          14.1194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Kanchanaburi",
+        "station_id": "PER-13-025"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.578875,
+          13.98231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chanthaburi",
+        "station_id": "PER-12-025"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.0904,
+          12.7664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chachoengsao",
+        "station_id": "PER-13-032"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.303892,
+          13.605208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chachoengsao",
+        "station_id": "PER-14-002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.04161,
+          13.722733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chonburi",
+        "station_id": "PER-7-037"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.25423,
+          13.278027
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chonburi",
+        "station_id": "PER-11-030"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.011513,
+          12.841583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chonburi",
+        "station_id": "PER-16-014"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.9907514,
+          12.7418599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chonburi",
+        "station_id": "PER-18-008"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.2031274,
+          13.25529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chonburi",
+        "station_id": "PER-18-009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.194843,
+          13.374012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chaiyaphum",
+        "station_id": "PER-7-008"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.02005,
+          15.726637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chaiyaphum",
+        "station_id": "PER-17-005"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6359209,
+          15.4058536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chumphon",
+        "station_id": "PER-14-009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.04399,
+          9.97798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chiang Mai",
+        "station_id": "PER-7-032"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.949219,
+          19.128918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chiang Mai",
+        "station_id": "PER-16-001"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.8061549,
+          18.4871039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Chiang Mai",
+        "station_id": "PER-16-002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.9950736,
+          18.8112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Trang",
+        "station_id": "PER-18-003"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.5818149,
+          7.5520529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Tak",
+        "station_id": "PER-6-004"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.1534,
+          16.7981
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Nayok",
+        "station_id": "PER-3-013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.9253,
+          14.0879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Pathom",
+        "station_id": "PER-7-035"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.15847,
+          13.805537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Pathom",
+        "station_id": "PER-12-017"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.3012,
+          13.7579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Pathom",
+        "station_id": "PER-14-001"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.2234,
+          13.777329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Phanom",
+        "station_id": "PER-7-015"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.7399,
+          17.46
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Ratchasima",
+        "station_id": "PER-7-010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.119446,
+          15.070712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Ratchasima",
+        "station_id": "PER-13-022"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.739303,
+          15.170918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Ratchasima",
+        "station_id": "PER-15-010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.3822,
+          14.6585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Ratchasima",
+        "station_id": "PER-15-011"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.9545,
+          14.8752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Si Thammarat",
+        "station_id": "PER-18-002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.999749,
+          8.276225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Sawan",
+        "station_id": "PER-6-002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1473,
+          15.4122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Sawan",
+        "station_id": "PER-8-013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.532905,
+          15.34198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Sawan",
+        "station_id": "PER-15-015"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1314,
+          15.6368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Sawan",
+        "station_id": "PER-15-016"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.3761,
+          15.2802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nakhon Sawan",
+        "station_id": "PER-16-011"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0804965,
+          15.6511469
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nonthaburi",
+        "station_id": "PER-3-006"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4132,
+          13.83
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nonthaburi",
+        "station_id": "PER-12-013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.2899,
+          14.1311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Narathiwat",
+        "station_id": "PER-18-006"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.72463,
+          6.4039095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nan",
+        "station_id": "PER-7-034"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.714577,
+          18.798622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Bueng Kan",
+        "station_id": "PER-15-002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.638,
+          18.3698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Buriram",
+        "station_id": "PER-12-008"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.167,
+          15.0812
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Buriram",
+        "station_id": "PER-17-016"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.1009361,
+          15.0243982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Buriram",
+        "station_id": "PER-17-017"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.7791,
+          14.6154
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Pathum Thani",
+        "station_id": "PER-13-029"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.617906,
+          14.085407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Prachuap Khiri Khan",
+        "station_id": "PER-18-001"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.8244911,
+          11.9459875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Prachinburi",
+        "station_id": "PER-5-011"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5307,
+          14.0669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Pattani",
+        "station_id": "PER-14-013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.195486,
+          6.849738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phra Nakhon Si Ayutthaya",
+        "station_id": "PER-3-014"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6537,
+          14.3003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phra Nakhon Si Ayutthaya",
+        "station_id": "PER-6-013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.610092,
+          14.221084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phra Nakhon Si Ayutthaya",
+        "station_id": "PER-9-024"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5719,
+          14.4634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phra Nakhon Si Ayutthaya",
+        "station_id": "PER-12-019"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4938,
+          14.1389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phang Nga",
+        "station_id": "PER-8-024"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.657398,
+          8.508917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phang Nga",
+        "station_id": "PER-14-008"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.456959,
+          8.408059
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phitsanulok",
+        "station_id": "PER-13-006"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.235428,
+          16.758702
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phitsanulok",
+        "station_id": "PER-15-003"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4316,
+          16.703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phetchaburi",
+        "station_id": "PER-13-033"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.910673,
+          12.895548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phetchabun",
+        "station_id": "PER-7-002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.062714,
+          16.285646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phetchabun",
+        "station_id": "PER-7-003"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.219269,
+          16.938158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Phetchabun",
+        "station_id": "PER-17-002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.169687,
+          16.6950726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Mukdahan",
+        "station_id": "PER-7-014"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.645264,
+          16.458042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Mae Hong Son",
+        "station_id": "PER-8-021"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.462578,
+          19.30128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Yasothon",
+        "station_id": "PER-17-009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.234778,
+          15.790944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Yasothon",
+        "station_id": "PER-17-010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.1734,
+          15.797653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Yala",
+        "station_id": "PER-18-007"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.2368183,
+          6.6184968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Roi Et",
+        "station_id": "PER-9-013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.727966,
+          15.783892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Roi Et",
+        "station_id": "PER-15-008"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.6849,
+          16.0462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Roi Et",
+        "station_id": "PER-17-008"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0496599,
+          15.7581309
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Roi Et",
+        "station_id": "PER-17-011"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.6737738,
+          16.0953123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Ranong",
+        "station_id": "PER-18-004"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.6561953,
+          10.013609
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Ranong",
+        "station_id": "PER-18-005"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.5975122,
+          9.7433169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Rayong",
+        "station_id": "PER-16-016"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.145822,
+          12.8038996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Ratchaburi",
+        "station_id": "PER-5-021"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.8384,
+          13.8556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Ratchaburi",
+        "station_id": "PER-13-034"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.830452,
+          13.583539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Lampang",
+        "station_id": "PER-6-009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.393825,
+          18.308084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Lampang",
+        "station_id": "PER-16-006"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.4429787,
+          18.3140974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Lamphun",
+        "station_id": "PER-16-008"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.048589,
+          18.62558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Loei",
+        "station_id": "PER-7-012"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.733391,
+          17.410593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Si Sa Ket",
+        "station_id": "PER-17-012"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.224285,
+          14.995367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Si Sa Ket",
+        "station_id": "PER-17-013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.3005437,
+          15.0956748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sakonnakhon",
+        "station_id": "PER-8-004"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.6038839,
+          17.4254365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Songkhla",
+        "station_id": "PER-8-036"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.492735,
+          7.071654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Songkhla",
+        "station_id": "PER-14-010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.32131,
+          7.118101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Songkhla",
+        "station_id": "PER-14-012"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.672424,
+          7.003633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Samut Prakan",
+        "station_id": "PER-16-012"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.8492719,
+          13.4969787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Samut Songkhram",
+        "station_id": "PER-9-032"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.964504,
+          13.475502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Samut Songkhram",
+        "station_id": "PER-10-034"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.029061,
+          13.416031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Samut Sakhon",
+        "station_id": "PER-10-030"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.139772,
+          13.552618
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Samut Sakhon",
+        "station_id": "PER-11-024"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.360577,
+          13.628822
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sa Kaeo",
+        "station_id": "PER-12-009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.3265,
+          13.7685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Saraburi",
+        "station_id": "PER-3-003"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.888,
+          14.3914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Saraburi",
+        "station_id": "PER-6-001"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.893707,
+          14.61117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Singburi",
+        "station_id": "PER-6-014"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4546,
+          14.7345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sukhothai",
+        "station_id": "PER-8-015"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.850724,
+          17.123011
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Suphanburi",
+        "station_id": "PER-13-024"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.172649,
+          14.48379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Surat Thani",
+        "station_id": "PER-14-003"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.252318,
+          9.134344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Surat Thani",
+        "station_id": "PER-14-006"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.69694,
+          9.23859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Surin",
+        "station_id": "PER-7-021"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.430969,
+          14.8936777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Ang Thong",
+        "station_id": "PER-11-016"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.2962653,
+          14.5827185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Ang Thong",
+        "station_id": "PER-12-012"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4732,
+          14.6315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Udon Thani",
+        "station_id": "PER-6-027"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.869003,
+          17.363644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Udon Thani",
+        "station_id": "PER-17-006"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.931156,
+          17.080042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Uttaradit",
+        "station_id": "PER-6-007"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.142021,
+          17.690851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Ubon Ratchathani",
+        "station_id": "PER-7-025"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.89312,
+          15.299867
+        ]
+      }
+    }
+  ]
+}

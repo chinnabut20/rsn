@@ -1,13 +1,30 @@
-
 services:
+  postgis:
+    image: postgis/postgis:latest
+    container_name: rsn_postgis
+    ports:
+      - "2410:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    volumes:
+      - ./postgis:/docker-entrypoint-initdb.d
+
   backend:
     build: ./backend
     container_name: rsn_api
     ports:
       - "2456:8000"
+    depends_on:
+      - postgis
     volumes:
       - ./backend:/app
-    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    command: >
+      sh -c "uvicorn main:app --host 0.0.0.0 --port 8000 --reload &
+             python cap_yolo_db1.py &
+             python cap_yolo_db2.py &
+             python cap_yolo_db3.py &
+             python main_pollution.py"
 
   frontend:
     image: node:latest
@@ -17,6 +34,4 @@ services:
       - "2400:3000"
     volumes:
       - ./frontend:/app
-    command: sh -c "npm i && npm i -g nodemon && nodemon"
-
-
+    command: sh -c "npm install && npm install -g nodemon && nodemon"

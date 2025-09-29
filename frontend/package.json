@@ -1,5 +1,5 @@
 {
-  "name": "udfire_gee",
+  "name": "rsn",
   "version": "1.0.0",
   "description": "udfire google earth engine version",
   "main": "server.js",
@@ -9,7 +9,7 @@
   "keywords": [
     "udfire"
   ],
-  "author": "sakda homhuan",
+  "author": "chinnabut kumpeera",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",

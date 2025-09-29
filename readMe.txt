@@ -9,5 +9,3 @@ docker compose build --no-cache
 #reacte
 npm run dev
 npm run build
-
-
