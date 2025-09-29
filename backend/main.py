@@ -344,7 +344,7 @@ async def available_dates():
 async def get_cctv_locations():
     try:
         # get from geojson file
-        geojson_path = "CCTV_locations.geojson"
+        geojson_path = "./CCTV_locations.geojson"
         if not os.path.exists(geojson_path):
             raise HTTPException(status_code=404, detail="GeoJSON file not found")
         import json
