@@ -1,4 +1,5 @@
 # uvicorn main:app --reload
+import requests
 from fastapi import FastAPI, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime, timedelta
@@ -101,23 +102,31 @@ except Exception as e:
 # ==========================
 def prepare_daily_df():
     try:
-        with get_connection() as conn:
-            pollution_df = pd.read_sql("""
-                SELECT date, time, station_id,
-                       co AS "CO", no2 AS "NO2", o3 AS "O3", so2 AS "SO2",
-                       pm25 AS "PM2.5", pm10 AS "PM10",
-                       temperature_c AS "Temperature (C)",
-                       humidity_percent AS "Humidity (%)",
-                       wind_speed_kmh AS "Wind Speed (km/h)",
-                       precipitation_mm AS "Precipitation (mm)"
-                FROM api.pollution_data
-            """, conn)
+        # ดึงข้อมูลจาก API
+        pollution_url = "https://geodev.fun/rsn_api/pollution_data"
+        vehicle_url   = "https://geodev.fun/rsn_api/vehicle_counts"
 
-            traffic_df = pd.read_sql("""
-                SELECT date, time, station_id,
-                       bus, car, motorcycle, truck, van, imagecount
-                FROM api.traffic_data
-            """, conn)
+        pollution_resp = requests.get(pollution_url)
+        traffic_resp   = requests.get(vehicle_url)
+
+        if pollution_resp.status_code != 200 or traffic_resp.status_code != 200:
+            raise ValueError("Error fetching data from API")
+
+        pollution_json = pollution_resp.json().get("data", [])
+        traffic_json   = traffic_resp.json().get("data", [])
+
+        pollution_df = pd.DataFrame(pollution_json)
+        traffic_df   = pd.DataFrame(traffic_json)
+
+        # rename ให้ตรงกับ columns เดิม
+        pollution_df = pollution_df.rename(columns={
+            "co": "CO", "no2": "NO2", "o3": "O3", "so2": "SO2",
+            "pm25": "PM2.5", "pm10": "PM10",
+            "temperature_c": "Temperature (C)",
+            "humidity_percent": "Humidity (%)",
+            "wind_speed_kmh": "Wind Speed (km/h)",
+            "precipitation_mm": "Precipitation (mm)"
+        })
 
         merged_df = pd.merge(
             pollution_df, traffic_df,
@@ -127,7 +136,7 @@ def prepare_daily_df():
 
         merged_df["date"] = pd.to_datetime(merged_df["date"], errors="coerce")
 
-        # เติมค่ารถ
+        # เติมค่ารถกรณี imagecount = 0 (ถ้าไม่มี column ก็ข้าม)
         if "imagecount" in merged_df.columns:
             for col in traffic_cols:
                 if col in merged_df.columns:
@@ -141,7 +150,7 @@ def prepare_daily_df():
                         .fillna(avg_all_time[mask])
                     )
 
-        # เติมมลพิษ + weather
+        # Interpolation
         def interpolate_group(group):
             group = group.set_index("date")
             pc = [c for c in pollution_cols if c in group.columns]
@@ -154,12 +163,12 @@ def prepare_daily_df():
 
         merged_df = merged_df.groupby("station_id", group_keys=False).apply(interpolate_group)
 
-        # ปัดค่ารถเป็น int
+        # ปัดค่ารถให้เป็น int
         for col in traffic_cols:
             if col in merged_df.columns:
                 merged_df[col] = merged_df[col].round(0).astype("Int64")
 
-        # Daily average
+        # ทำ daily average
         agg_cols = [c for c in pollution_cols + traffic_cols + weather_cols if c in merged_df.columns]
         df_daily = (
             merged_df.groupby(["date","station_id"])[agg_cols]
@@ -173,8 +182,9 @@ def prepare_daily_df():
         return df_daily
 
     except Exception as e:
-        print(f"❌ Error in prepare_daily_df: {e}")
+        print(f"❌ Error in prepare_daily_df (API mode): {e}")
         raise
+
 
 # ==========================
 # Forecast functions
