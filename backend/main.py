@@ -48,48 +48,32 @@ lstm_models = {}
 scalers = {}
 configs = {}
 
-model_files = {
-    "PM2.5": {
-        "model": "PM2.5_model_lstm.h5",
-        "scaler": "PM2.5_model_scaler.pkl",
-        "config": "PM2.5_model_config.pkl"
-    },
-    "PM10": {
-        "model": "PM10_model_lstm.h5",
-        "scaler": "PM10_model_scaler.pkl",
-        "config": "PM10_model_config.pkl"
-    },
-    "NO2": {
-        "model": "NO2_model_lstm.h5",
-        "scaler": "NO2_model_scaler.pkl",
-        "config": "NO2_model_config.pkl"
-    },
-    "O3": {
-        "model": "O3_model_lstm.h5",
-        "scaler": "O3_model_scaler.pkl",
-        "config": "O3_model_config.pkl"
-    },
-    "SO2": {
-        "model": "SO2_model_lstm.h5",
-        "scaler": "SO2_model_scaler.pkl",
-        "config": "SO2_model_config.pkl"
-    },
-    "CO": {
-        "model": "CO_model_lstm.h5",
-        "scaler": "CO_model_scaler.pkl",
-        "config": "CO_model_config.pkl"
-    }
-}
+pollution_cols = ["PM2.5", "PM10", "NO2", "SO2", "O3", "CO"]
+weather_cols = ["Temperature (C)", "Humidity (%)", "Wind Speed (km/h)", "Precipitation (mm)"]
+traffic_cols = ["bus", "car", "motorcycle", "truck", "van"]
 
+# ==========================
+# Load models
+# ==========================
 def load_all_models():
-    model_dir = "models"
-    for pollutant, files in model_files.items():
-        try:
-            model_path = os.path.join(model_dir, files["model"])
-            scaler_path = os.path.join(model_dir, files["scaler"])
-            config_path = os.path.join(model_dir, files["config"])
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    model_dir = os.path.join(BASE_DIR, "models")
 
-            lstm_models[pollutant] = load_model(
+    if not os.path.exists(model_dir):
+        print(f"❌ Model directory '{model_dir}' not found")
+        return
+
+    for p in pollution_cols:
+        try:
+            model_path = os.path.join(model_dir, f"{p}_model_lstm.h5")
+            scaler_path = os.path.join(model_dir, f"{p}_model_scaler.pkl")
+            config_path = os.path.join(model_dir, f"{p}_model_config.pkl")
+
+            if not (os.path.exists(model_path) and os.path.exists(scaler_path) and os.path.exists(config_path)):
+                print(f"⚠️ Missing files for {p}")
+                continue
+
+            lstm_models[p] = load_model(
                 model_path,
                 custom_objects={
                     "mse": MeanSquaredError(),
@@ -97,13 +81,20 @@ def load_all_models():
                     "MeanSquaredError": MSE()
                 }
             )
-            scalers[pollutant] = joblib.load(scaler_path)
+            scalers[p] = joblib.load(scaler_path)
             with open(config_path, "rb") as f:
-                configs[pollutant] = pickle.load(f)
+                configs[p] = pickle.load(f)
 
-            print(f"✅ Loaded {pollutant} model")
+            print(f"✅ Loaded {p} model")
+
         except Exception as e:
-            print(f"❌ Error loading {pollutant}: {e}")
+            print(f"❌ Error loading {p}: {e}")
+
+try:
+    load_all_models()
+    print(f"🚀 FastAPI started. Loaded {len(lstm_models)} models")
+except Exception as e:
+    print(f"❌ Error during model loading: {e}")
 
 # ==========================
 # Prepare daily dataframe from DB
