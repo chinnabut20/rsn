@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 import numpy as np
 import math
 import pytz
-from location_data import LOCATIONS
+from location_data_updated import LOCATIONS
 
 # ตั้งเวลาให้ตรงกับ Timezone ของประเทศไทย
 bangkok_tz = pytz.timezone('Asia/Bangkok')
