@@ -97,93 +97,104 @@ try:
 except Exception as e:
     print(f"❌ Error during model loading: {e}")
 
-# ==========================
-# Prepare daily dataframe from DB
-# ==========================
 def prepare_daily_df():
     try:
-        # ดึงข้อมูลจาก API
+        import requests, pandas as pd
+        from datetime import timedelta
+
         pollution_url = "https://geodev.fun/rsn_api/pollution_data"
         vehicle_url   = "https://geodev.fun/rsn_api/vehicle_counts"
 
-        pollution_resp = requests.get(pollution_url)
-        traffic_resp   = requests.get(vehicle_url)
+        pollution_df = pd.DataFrame(requests.get(pollution_url).json().get("data", []))
+        traffic_df   = pd.DataFrame(requests.get(vehicle_url).json().get("data", []))
 
-        if pollution_resp.status_code != 200 or traffic_resp.status_code != 200:
-            raise ValueError("Error fetching data from API")
-
-        pollution_json = pollution_resp.json().get("data", [])
-        traffic_json   = traffic_resp.json().get("data", [])
-
-        pollution_df = pd.DataFrame(pollution_json)
-        traffic_df   = pd.DataFrame(traffic_json)
-
-        # ✅ rename ให้ตรงกับ columns เดิม
-        pollution_df = pollution_df.rename(columns={
-            "co": "CO", "no2": "NO2", "o3": "O3", "so2": "SO2",
-            "pm25": "PM2.5", "pm10": "PM10",
-            "temperature_c": "Temperature (C)",
-            "humidity_percent": "Humidity (%)",
-            "wind_speed_kmh": "Wind Speed (km/h)",
-            "precipitation_mm": "Precipitation (mm)"
-        })
-
+        # === Merge ===
         merged_df = pd.merge(
             pollution_df, traffic_df,
             on=["date", "time", "station_id"],
             how="outer"
         )
 
+        # === เตรียม column และแปลงชนิดข้อมูล ===
         merged_df["date"] = pd.to_datetime(merged_df["date"], errors="coerce")
+        merged_df = merged_df.sort_values(["station_id", "date", "time"]).reset_index(drop=True)
 
-        # เติมค่ารถกรณี imagecount = 0 (ถ้าไม่มี column ก็ข้าม)
-        if "imagecount" in merged_df.columns:
+        traffic_cols = ["bus", "car", "motorcycle", "truck", "van", "total_vehicles"]
+        pollution_cols = ["co", "no2", "o3", "so2", "pm25", "pm10"]
+        weather_cols = ["temperature_c", "humidity_percent", "wind_speed_kmh", "precipitation_mm"]
+
+        # ============================================
+        # เติมข้อมูลรถเมื่อ “ไม่มีข้อมูล” (ทุกประเภทเป็นศูนย์)
+        # ============================================
+        if all(col in merged_df.columns for col in traffic_cols):
+            # mask วันที่รถทุกประเภทเป็น 0 → ถือว่าไม่มีข้อมูล
+            zero_mask = (merged_df[traffic_cols].sum(axis=1) == 0)
+
             for col in traffic_cols:
-                if col in merged_df.columns:
-                    mask = merged_df["imagecount"] == 0
-                    avg_station_time = merged_df.groupby(["station_id","time"])[col].transform("mean")
-                    avg_station_day  = merged_df.groupby(["station_id","date"])[col].transform("mean")
-                    avg_all_time     = merged_df.groupby("time")[col].transform("mean")
-                    merged_df.loc[mask, col] = (
-                        avg_station_time[mask]
-                        .fillna(avg_station_day[mask])
-                        .fillna(avg_all_time[mask])
-                    )
+                avg_station_time = merged_df.groupby(['station_id', 'time'])[col].transform('mean')
+                avg_station_day  = merged_df.groupby(['station_id', 'date'])[col].transform('mean')
+                avg_all_time     = merged_df.groupby('time')[col].transform('mean')
 
-        # Interpolation
-        def interpolate_group(group):
+                merged_df.loc[zero_mask, col] = (
+                    avg_station_time[zero_mask]
+                    .fillna(avg_station_day[zero_mask])
+                    .fillna(avg_all_time[zero_mask])
+                )
+
+        # ============================================
+        # เติมข้อมูลมลพิษและอุตุนิยมวิทยา
+        # ============================================
+        def interpolate_pollution_weather(group):
             group = group.set_index("date")
-            pc = [c for c in pollution_cols if c in group.columns]
-            wc = [c for c in weather_cols if c in group.columns]
-            if pc:
-                group[pc] = group[pc].interpolate(method="time", limit_direction="both").ffill().bfill()
-            if wc:
-                group[wc] = group[wc].interpolate(method="time", limit_direction="both").ffill().bfill()
+            cols_pollution = [c for c in pollution_cols if c in group.columns]
+            cols_weather = [c for c in weather_cols if c in group.columns]
+
+            if cols_pollution:
+                group[cols_pollution] = (
+                    group[cols_pollution]
+                    .interpolate(method="time", limit_direction="both")
+                    .fillna(method="ffill").fillna(method="bfill")
+                )
+            if cols_weather:
+                group[cols_weather] = (
+                    group[cols_weather]
+                    .interpolate(method="time", limit_direction="both")
+                    .fillna(method="ffill").fillna(method="bfill")
+                )
+
             return group.reset_index()
 
-        merged_df = merged_df.groupby("station_id", group_keys=False).apply(interpolate_group)
+        merged_df = merged_df.groupby("station_id", group_keys=False).apply(interpolate_pollution_weather)
 
+        # ============================================
         # ปัดค่ารถให้เป็น int
+        # ============================================
         for col in traffic_cols:
             if col in merged_df.columns:
                 merged_df[col] = merged_df[col].round(0).astype("Int64")
 
+        # ============================================
         # ทำ daily average
+        # ============================================
         agg_cols = [c for c in pollution_cols + traffic_cols + weather_cols if c in merged_df.columns]
         df_daily = (
-            merged_df.groupby(["date","station_id"])[agg_cols]
+            merged_df.groupby(["date", "station_id"])[agg_cols]
             .mean(numeric_only=True)
             .reset_index()
         )
+
         for col in traffic_cols:
             if col in df_daily.columns:
                 df_daily[col] = df_daily[col].round(0).astype("Int64")
 
+        print(f"✅ prepare_daily_df สำเร็จ: {len(df_daily)} แถว จาก {df_daily['station_id'].nunique()} สถานี")
         return df_daily
 
     except Exception as e:
-        print(f"❌ Error in prepare_daily_df (API mode): {e}")
-        raise
+        import traceback
+        print(traceback.format_exc())
+        print(f"❌ prepare_daily_df error: {e}")
+        return pd.DataFrame()
 
 
 # ==========================
