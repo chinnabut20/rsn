@@ -2,7 +2,7 @@
 import requests
 from fastapi import FastAPI, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from typing import Optional
 import numpy as np
 import pandas as pd
@@ -357,11 +357,15 @@ async def get_pollution_data(date: Optional[str] = Query(None), time: Optional[s
 async def available_dates():
     conn = get_connection()
     cur = conn.cursor()
-    cur.execute("SELECT MIN(date), MAX(date) FROM api.traffic_data;")
-    min_date, max_date = cur.fetchone()
+    cur.execute("SELECT MIN(date) FROM api.traffic_data;")
+    min_date = cur.fetchone()[0]
     cur.close()
     conn.close()
-    return {"min_date": str(min_date), "max_date": str(max_date)}
+
+    # ให้ max_date = วันนี้ แทนที่จะเอาจาก DB
+    today = date.today()
+
+    return {"min_date": str(min_date), "max_date": str(today)}
 
 @app.get("/rsn_api/CCTV_locations")
 async def get_cctv_locations():
