@@ -15,6 +15,6 @@ opencv-python
 schedule
 matplotlib
 python-dotenv
-tensorflow==2.10.1
-keras==2.10.0
+tensorflow==2.20.0
+keras==3.11.3
 h5py==3.7.0
