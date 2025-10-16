@@ -57,9 +57,9 @@ traffic_cols = ["bus", "car", "motorcycle", "truck", "van"]
 # Load models
 # ==========================
 def load_all_models():
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    model_dir = os.path.join(BASE_DIR, "models")
-
+    # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    # model_dir = os.path.join(BASE_DIR, "models")
+    model_dir = "./models"
     if not os.path.exists(model_dir):
         print(f"❌ Model directory '{model_dir}' not found")
         return
@@ -252,6 +252,7 @@ async def forecast_pollution(
     days: int = Query(7)
 ):
     try:
+        print(lstm_models)
         if not lstm_models:
             raise HTTPException(status_code=500, detail="No models loaded")
 
