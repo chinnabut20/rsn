@@ -3,7 +3,6 @@ python-multipart
 fastapi==0.111.1
 uvicorn[standard]==0.23.2
 pandas==2.1.1
-numpy==1.26.0
 scikit-learn==1.3.0
 joblib==1.3.2
 requests==2.31.0
@@ -17,4 +16,5 @@ matplotlib
 python-dotenv
 tensorflow==2.20.0
 keras==3.11.3
-h5py==3.7.0
+h5py==3.14.0
+numpy==2.3.2
