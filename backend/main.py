@@ -13,6 +13,7 @@ import joblib, pickle
 from tensorflow.keras.models import load_model
 from tensorflow.keras.losses import MeanSquaredError
 from tensorflow.keras.metrics import MeanSquaredError as MSE
+from tensorflow.keras import layers
 
 # ==========================
 # FastAPI Setup
@@ -76,14 +77,28 @@ def load_all_models():
                 print(f"⚠️ Missing files for {p}")
                 continue
 
+            # lstm_models[p] = load_model(
+            #     model_path,
+            #     custom_objects={
+            #         "mse": MeanSquaredError(),
+            #         "mean_squared_error": MSE(),
+            #         "MeanSquaredError": MSE()
+            #     }
+            # )
+
+
+            # เพิ่มใน load_all_models():
             lstm_models[p] = load_model(
                 model_path,
+                compile=False,  # ❗ ปิดการ compile ตอนโหลด
                 custom_objects={
                     "mse": MeanSquaredError(),
                     "mean_squared_error": MSE(),
-                    "MeanSquaredError": MSE()
+                    "MeanSquaredError": MSE(),
+                    "InputLayer": layers.InputLayer  # ป้องกัน error 'batch_shape'
                 }
             )
+
             scalers[p] = joblib.load(scaler_path)
             with open(config_path, "rb") as f:
                 configs[p] = pickle.load(f)
