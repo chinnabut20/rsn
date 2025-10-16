@@ -70,6 +70,8 @@ def load_all_models():
             scaler_path = os.path.join(model_dir, f"{p}_model_scaler.pkl")
             config_path = os.path.join(model_dir, f"{p}_model_config.pkl")
 
+            print(f"Loading model for {p} from {model_path}, {scaler_path}, {config_path}")
+
             if not (os.path.exists(model_path) and os.path.exists(scaler_path) and os.path.exists(config_path)):
                 print(f"⚠️ Missing files for {p}")
                 continue
