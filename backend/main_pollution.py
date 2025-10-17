@@ -322,6 +322,7 @@ if __name__ == "__main__":
     schedule.every().day.at("09:00").do(fetch_and_store)
     schedule.every().day.at("13:00").do(fetch_and_store)
     schedule.every().day.at("18:00").do(fetch_and_store)
+    print("🚀 Scheduler started for pollution data fetching")
 
     while True:
         schedule.run_pending()
