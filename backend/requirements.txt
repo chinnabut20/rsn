@@ -17,4 +17,4 @@ python-dotenv
 tensorflow==2.20.0
 keras==3.11.3
 h5py==3.14.0
-numpy==2.3.2
+numpy==1.26.4
