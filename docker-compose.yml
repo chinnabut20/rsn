@@ -23,7 +23,7 @@ services:
       sh -c "python cap_yolo_db1.py &
              python cap_yolo_db2.py &
              python cap_yolo_db3.py &
-             python main_pollution.py &
+             python3 main_pollution.py &
              uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
     restart: always
 
