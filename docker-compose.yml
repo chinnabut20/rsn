@@ -29,12 +29,14 @@ services:
   scheduler:
     build: ./backend
     container_name: rsn_scheduler
+    working_dir: /app
     depends_on:
       - postgis
     volumes:
       - ./backend:/app
-    command: python main_pollution.py
+    command: sh -c "sleep 10 && python main_pollution.py"
     restart: always
+
 
   frontend:
     image: node:latest
