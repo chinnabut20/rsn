@@ -285,14 +285,14 @@ def fetch_and_store():
 # ========== Scheduler ==========
 def run_scheduler():
     print("🚀 Scheduler started for pollution data fetching (Bangkok time)")
-    print("🕒 Waiting for schedule times: 09:00, 13:00, 18:00 ...\n")
+    print("🕒 Waiting for schedule times: 09:00, 13:00, 18:00")
 
     while True:
         now = datetime.now(bangkok_tz)
         current_time = now.strftime("%H:%M")
 
         # รันตอนเวลาที่กำหนด
-        if current_time in ["09:00", "13:00", "18:00", "23:21", "23:22"]:
+        if current_time in ["09:00", "13:00", "18:00"]:
             print(f"🕘 Running fetch_and_store at {current_time} (Bangkok)")
             fetch_and_store()
             time.sleep(60)  # ป้องกันการรันซ้ำในนาทีเดียวกัน
