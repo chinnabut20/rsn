@@ -189,7 +189,7 @@ def fetch_and_store():
         cur.execute(f"""
             SELECT {",".join([f"AVG({f})" for f in RAW_FIELDS])}
             FROM api.pollution_data
-            WHERE EXTRACT(HOUR FROM time) = %s
+            WHERE EXTRACT(HOUR FROM TO_TIMESTAMP(time, 'HH24:MI:SS')) = %s
               AND date >= CURRENT_DATE - INTERVAL '14 days'
         """, (hour_val,))
         row = cur.fetchone()
@@ -215,7 +215,7 @@ def fetch_and_store():
                     SELECT {",".join([f"AVG({f})" for f in RAW_FIELDS])}
                     FROM api.pollution_data
                     WHERE station_id = %s
-                      AND EXTRACT(HOUR FROM time) = %s
+                      AND EXTRACT(HOUR FROM TO_TIMESTAMP(time, 'HH24:MI:SS')) = %s
                       AND date >= CURRENT_DATE - INTERVAL '14 days'
                 """, (sid, hour_val))
                 row = cur.fetchone()
