@@ -103,5 +103,5 @@ services:
       - "2400:3000"
     volumes:
       - ./frontend:/app
-    command: sh -c "npm install && npm install -g nodemon && nodemon
+    command: sh -c "npm install && npm install -g nodemon && nodemon"
     
