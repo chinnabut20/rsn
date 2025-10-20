@@ -1,3 +1,43 @@
+# services:
+#   postgis:
+#     image: postgis/postgis:latest
+#     container_name: rsn_postgis
+#     ports:
+#       - "2410:5432"
+#     environment:
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASSWORD: 1234
+#     volumes:
+#       - ./postgis:/docker-entrypoint-initdb.d
+
+#   backend:
+#     build: ./backend
+#     container_name: rsn_api
+#     ports:
+#       - "2456:8000"
+#     depends_on:
+#       - postgis
+#     volumes:
+#       - ./backend:/app
+#     command: >
+#       sh -c "python cap_yolo_db1.py &
+#              python cap_yolo_db2.py &
+#              python cap_yolo_db3.py &
+#              python main_pollution.py &
+#              uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+#     restart: always
+
+#   frontend:
+#     image: node:latest
+#     container_name: rsn
+#     working_dir: /app
+#     ports:
+#       - "2400:3000"
+#     volumes:
+#       - ./frontend:/app
+#     command: sh -c "npm install && npm install -g nodemon && nodemon"
+#     restart: always
+
 services:
   postgis:
     image: postgis/postgis:latest
@@ -10,7 +50,7 @@ services:
     volumes:
       - ./postgis:/docker-entrypoint-initdb.d
 
-  backend:
+  backend_api:
     build: ./backend
     container_name: rsn_api
     ports:
@@ -19,12 +59,39 @@ services:
       - postgis
     volumes:
       - ./backend:/app
-    command: >
-      sh -c "python cap_yolo_db1.py &
-             python cap_yolo_db2.py &
-             python cap_yolo_db3.py &
-             python main_pollution.py &
-             uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    restart: always
+
+  cap1:
+    build: ./backend
+    container_name: cap_yolo_db1
+    volumes:
+      - ./backend:/app
+    command: python cap_yolo_db1.py
+    restart: always
+
+  cap2:
+    build: ./backend
+    container_name: cap_yolo_db2
+    volumes:
+      - ./backend:/app
+    command: python cap_yolo_db2.py
+    restart: always
+
+  cap3:
+    build: ./backend
+    container_name: cap_yolo_db3
+    volumes:
+      - ./backend:/app
+    command: python cap_yolo_db3.py
+    restart: always
+
+  pollution:
+    build: ./backend
+    container_name: main_pollution
+    volumes:
+      - ./backend:/app
+    command: python main_pollution.py
     restart: always
 
   frontend:
@@ -35,5 +102,5 @@ services:
       - "2400:3000"
     volumes:
       - ./frontend:/app
-    command: sh -c "npm install && npm install -g nodemon && nodemon"
+    command: sh -c "npm install && npm run dev"
     restart: always
