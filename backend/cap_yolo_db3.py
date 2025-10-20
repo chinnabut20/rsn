@@ -1,4 +1,4 @@
-#python3 cap_yolo_db3.py
+#python3 cap_yolo_db1.py
 import os
 import time
 import threading
@@ -13,6 +13,8 @@ from ultralytics import YOLO
 import psycopg2  
 import shutil
 import cv2 
+import pytz
+
 
 yolo_model = YOLO("best.pt")  
 
@@ -27,8 +29,8 @@ DB_PASS = "1234"
 CAPTURE_INTERVAL_SEC = 60
 NUM_CAPTURES = 60
 CAPTURE_TIMES = [(8, 0), (12, 0), (17, 0)]
-bangkok_tz = timezone(timedelta(hours=7))
 
+bangkok_tz = pytz.timezone("Asia/Bangkok")
 
 
 # === แคปภาพ 1 ภาพด้วย OpenCV
@@ -194,7 +196,7 @@ def merge_camera_results(results_all):
 def main_capture(hour, minute):
     folder_name = datetime.now(bangkok_tz).replace(
         hour=hour, minute=minute, second=0, microsecond=0
-    ).strftime("%Y-%m-%d %H-%M-%S") + "G3"
+    ).strftime("%Y-%m-%d %H-%M-%S") + "G1"
 
     threads = []
     for province, cams in urls.items():
@@ -257,20 +259,64 @@ def main_capture(hour, minute):
 #         main_capture(hour, minute)
 
 # === Scheduler
+# if __name__ == "__main__":
+#     for hour, minute in CAPTURE_TIMES:
+#         now = datetime.now(bangkok_tz)
+#         start_time = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+
+#         if now > start_time:
+#             print(f"⏩ ข้ามรอบ {hour:02d}:{minute:02d} (เลยเวลาแล้ว)")
+#             continue
+
+#         wait_sec = (start_time - now).total_seconds()
+#         print(f"⏳ กำลังรอเวลา {start_time.strftime('%Y-%m-%d %H:%M:%S')} "
+#               f"(เหลือ {int(wait_sec)} วินาที)")
+#         time.sleep(wait_sec)
+
+#         print(f"\n🚀 เริ่มการแคปภาพ + YOLO สำหรับรอบ {hour:02d}:{minute:02d}\n")
+#         main_capture(hour, minute)
+#         print(f"\n✅ เสร็จสิ้นการแคปภาพ + YOLO สำหรับรอบ {hour:02d}:{minute:02d}\n")
+
+def wait_until(target_time):
+    """รอจนถึงเวลาที่กำหนด"""
+    now = datetime.now(bangkok_tz)
+    wait_seconds = (target_time - now).total_seconds()
+    if wait_seconds > 0:
+        print(f"⏳ รอเวลา {target_time.strftime('%H:%M:%S')} อีก {wait_seconds/60:.1f} นาที...")
+        time.sleep(wait_seconds)
+
+
+def daily_loop():
+    """ลูปหลัก ทำงานในแต่ละวัน"""
+    while True:
+        today = datetime.now(bangkok_tz).date()
+
+        for hour, minute in CAPTURE_TIMES:
+            now = datetime.now(bangkok_tz)
+            target_time = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+
+            # ถ้าเวลานั้นผ่านมาแล้ววันนี้ → ข้าม
+            if now > target_time:
+                print(f"⏩ ข้ามรอบ {hour:02d}:{minute:02d} (เลยเวลาแล้ว)")
+                continue
+
+            # รอจนถึงเวลา
+            wait_until(target_time)
+
+            # เริ่มทำงาน
+            print(f"🚀 เริ่มเก็บข้อมูลรอบ {hour:02d}:{minute:02d}")
+            try:
+                main_capture(hour, minute)
+                print(f"✅ เสร็จสิ้นรอบ {hour:02d}:{minute:02d}")
+            except Exception as e:
+                print(f"❌ เกิดข้อผิดพลาดในรอบ {hour:02d}:{minute:02d} — {e}")
+
+        # ✅ เมื่อจบวัน ให้รอวันใหม่ก่อนเริ่มรอบใหม่
+        print("🌙 จบวัน รอวันใหม่...")
+        while datetime.now(bangkok_tz).date() == today:
+            time.sleep(60)  # เช็กทุก 1 นาที
+
+
 if __name__ == "__main__":
-    for hour, minute in CAPTURE_TIMES:
-        now = datetime.now(bangkok_tz)
-        start_time = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
-
-        if now > start_time:
-            print(f"⏩ ข้ามรอบ {hour:02d}:{minute:02d} (เลยเวลาแล้ว)")
-            continue
-
-        wait_sec = (start_time - now).total_seconds()
-        print(f"⏳ กำลังรอเวลา {start_time.strftime('%Y-%m-%d %H:%M:%S')} "
-              f"(เหลือ {int(wait_sec)} วินาที)")
-        time.sleep(wait_sec)
-
-        print(f"\n🚀 เริ่มการแคปภาพ + YOLO สำหรับรอบ {hour:02d}:{minute:02d}\n")
-        main_capture(hour, minute)
-        print(f"\n✅ เสร็จสิ้นการแคปภาพ + YOLO สำหรับรอบ {hour:02d}:{minute:02d}\n")
+    print("🚀 เริ่มต้นระบบเก็บข้อมูล (Cap_YOLO_DB3)")
+    daily_loop()
