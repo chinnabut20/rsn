@@ -49,7 +49,7 @@ services:
       POSTGRES_PASSWORD: 1234
     volumes:
       - ./postgis:/docker-entrypoint-initdb.d
-    
+    restart: always
 
   backend_api:
     build: ./backend
@@ -61,39 +61,48 @@ services:
     volumes:
       - ./backend:/app
     command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-    
+    restart: always
 
   cap1:
     build: ./backend
     container_name: cap_yolo_db1
+    depends_on:
+      - postgis
     volumes:
       - ./backend:/app
     command: python cap_yolo_db1.py
+    restart: always
     
 
   cap2:
     build: ./backend
     container_name: cap_yolo_db2
+    depends_on:
+      - postgis
     volumes:
       - ./backend:/app
     command: python cap_yolo_db2.py
-    
+    restart: always
     
   cap3:
     build: ./backend
     container_name: cap_yolo_db3
+    depends_on:
+      - postgis
     volumes:
       - ./backend:/app
     command: python cap_yolo_db3.py
-    
+    restart: always
 
   pollution:
     build: ./backend
     container_name: main_pollution
+    depends_on:
+      - postgis
     volumes:
       - ./backend:/app
     command: python main_pollution.py
-    
+    restart: always
 
   frontend:
     image: node:latest
@@ -104,4 +113,4 @@ services:
     volumes:
       - ./frontend:/app
     command: sh -c "npm install && npm install -g nodemon && nodemon"
-    
+    restart: always
